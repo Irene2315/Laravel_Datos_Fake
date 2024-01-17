@@ -12,6 +12,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
+       $schedule->exec('./vendor/bin/sail artisan app:migrar-datos-aleatorios-meteo')->everyMinute();
     }
 
     /**
